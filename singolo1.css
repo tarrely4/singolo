@@ -4,14 +4,15 @@
 }
 
 html {
-  font-size: 10px;
-  max-width: 1020px;
   margin: 0 auto;
+  max-width: 1020px;
+
+  font-size: 10px;
 }
 
 .wrapper {
-  max-width: 940px;
   margin: 0 auto;
+  max-width: 940px;
 }
 
 .header a {
@@ -19,21 +20,21 @@ html {
 }
 
 .header {
+  font-family: "Lato-Bold", Verdana, sans-serif;
   background-color: #2d303a;
   border-bottom: solid #323746 6px;
-  font-family: "Lato-Bold";
 }
 
 .logo {
   display: inline-block;
   margin: 35px 0;
+
   line-height: 19px;
   font-size: 1.2rem;
   text-align: justify;
 }
 
 .logo h1 {
-
   color: white;
 }
 
@@ -44,19 +45,20 @@ html {
 .header__navigation,
 .navigation {
   float: right;
-/*  display: inline-block;*/
 }
 
 .navigation__elem:not(:last-child)::after {
-  color: #494e62;
-  content: "\00B7";
   padding: 0 1.3rem;
+
+  content: "\00B7";
+  color: #494e62;
 }
 
 .navigation__elem {
   display: inline-block;
-  line-height: 9px;
   margin: 45px 0 35px 0;
+
+  line-height: 9px;
   font-size: 1.14rem;
   text-align: justify;
 }
@@ -101,14 +103,14 @@ html {
 }
 
 .slider__button_left {
-  padding-right: 5px;
   float: left;
+  padding-right: 5px;
 }
 
 .slider__button_right {
+  float: right;
   padding-right: 5px;
   transform: scaleX(-1);
-  float: right;
 }
 
 .vertical,
@@ -142,7 +144,7 @@ html {
 }
 
 .our-services__name {
-  font-family: Lato-Black;
+  font-family: Lato-Black, Verdana, sans-serif;
   line-height: 22px;
   font-size: 3rem;
   letter-spacing: 0.1px;
@@ -151,7 +153,8 @@ html {
 
 .our-services__text {
   padding: 25px 0 0 0;
-  font-family: Lato-Light;
+
+  font-family: Lato-Light, Verdana, sans-serif;
   line-height: 30px;
   font-size: 1.85rem;
   letter-spacing: -0.1px;
@@ -161,9 +164,11 @@ html {
 
 .layout-3-column {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 84px);
   grid-gap: 39px 20px;
+
   padding-top: 46px;
 }
 
@@ -179,8 +184,8 @@ html {
 }
 
 .service__name {
-  transform: translateY(-4px);
   font-family: Lato-Black;
+  transform: translateY(-4px);
   font-size: 1.85rem;
   letter-spacing: -0.4px;
   word-spacing: 0.1rem;
@@ -188,7 +193,7 @@ html {
 }
 
 .service__text {
-  font-family: Lato-Regular;
+  font-family: Lato-Regular, Verdana, sans-serif;
   line-height: 21px;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
