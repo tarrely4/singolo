@@ -66,14 +66,14 @@ html {
   color: #dedede;
 }
 
-/* .portfolio__buttons.children:nth-child(n+13) {
-  display: none;
-} */
-
 .portfolio-grid {
   display: grid;
   grid-template: repeat(3, 187px) / repeat(4, 220px);
   grid-gap: 20px;
 
   padding: 16px 0 67px 0;
+}
+
+.picture:nth-child(n+13){
+  display:none;
 }
