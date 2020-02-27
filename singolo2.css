@@ -6,8 +6,12 @@
 html {
   margin: 0 auto;
   max-width: 1020px;
-
   font-size: 10px;
+}
+
+.portfolio {
+  background-color: #2d303a;
+  border-bottom: solid #323746 6px;
 }
 
 .wrapper {
@@ -16,19 +20,60 @@ html {
 }
 
 .portfolio__name {
-  font-family: "Lato-Black";
+  padding-top: 69px;
+  font-family: "Lato-Black", Verdana, sans-serif;
+  line-height: 18px;
+  font-size: 3rem;
+  letter-spacing: 0.02rem;
+  font-weight: 900;
+  color: #666d89;
 }
 
 .portfolio__text {
-
+  padding-top: 27px;
+  font-family: "Lato-Light", Verdana, sans-serif;
+  line-height: 30px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #767e9e;
 }
 
 .portfolio__buttons {
-
+  padding-top: 12px;
 }
+
+.buttons input[type="checkbox"] {
+  display: none;
+}
+
+.buttons label {
+  margin-right: 6px;
+  padding: 3px 7px;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid #767e9e 1px;
+  border-radius: 5px;
+
+  font-family: "Lato-Regular", Verdana, sans-serif;
+  line-height: 25px;
+  font-size: 1.2rem;
+  color: #767e9e;
+
+  cursor: pointer;
+}
+
+.buttons input[type="checkbox"]:checked + label {
+  border: solid #dedede 1px;
+  color: #dedede;
+}
+
+/* .portfolio__buttons.children:nth-child(n+13) {
+  display: none;
+} */
 
 .portfolio-grid {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(3, 187px) / repeat(4, 220px);
   grid-gap: 20px;
+
+  padding: 16px 0 67px 0;
 }
