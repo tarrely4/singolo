@@ -19,21 +19,24 @@ html {
   max-width: 940px;
 }
 
-.portfolio__name {
+.section__name {
   padding-top: 69px;
   font-family: "Lato-Black", Verdana, sans-serif;
   line-height: 18px;
   font-size: 3rem;
   letter-spacing: 0.02rem;
+  word-spacing: -0.15rem;
   font-weight: 900;
   color: #666d89;
 }
 
-.portfolio__text {
+.section__text {
   padding-top: 27px;
   font-family: "Lato-Light", Verdana, sans-serif;
   line-height: 30px;
   font-size: 1.8rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.03rem;
   font-weight: 300;
   color: #767e9e;
 }
@@ -76,4 +79,47 @@ html {
 
 .picture:nth-child(n+13){
   display:none;
+}
+
+.employee-flex {
+  padding-top: 45px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+}
+
+.employee {
+  max-width: 300px;
+}
+
+.employee__name {
+  padding-top: 16px;
+
+  font-family: "Lato-Black", Verdana, sans-serif;
+  line-height: 18px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #666d89;
+}
+
+.employee__text {
+  padding-top: 10px;
+  font-family: "Lato-Regular", Verdana, sans-serif;
+  line-height: 22px;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  word-spacing: -0.15rem;
+  font-weight: 400;
+  color: #767e9e;
+}
+
+.employee__contacts {
+  padding-top: 22px;
+}
+
+.contact {
+  margin-right: 6px;
 }
