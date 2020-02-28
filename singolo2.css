@@ -81,6 +81,11 @@ html {
   display:none;
 }
 
+.about-us {
+  background-color: #f2f2f2;
+  border-bottom: solid #ffffff 6px;
+}
+
 .employee-flex {
   padding-top: 45px;
 
@@ -88,7 +93,6 @@ html {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-
 }
 
 .employee {
@@ -117,9 +121,17 @@ html {
 }
 
 .employee__contacts {
-  padding-top: 22px;
+  padding: 22px 0 65px 0;
 }
 
 .contact {
   margin-right: 6px;
+
+  /* padding: 5px 0;
+  border: solid #767e9e 1px;
+  border-radius: 50%; */
+}
+
+.contact:hover {
+  background-color: black;
 }
