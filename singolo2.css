@@ -125,13 +125,30 @@ html {
 }
 
 .contact {
+  display: inline-block;
   margin-right: 6px;
-
-  /* padding: 5px 0;
-  border: solid #767e9e 1px;
-  border-radius: 50%; */
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
 }
 
 .contact:hover {
-  background-color: black;
+  box-shadow: 0 0 14px 3px;
+  transition: 0.3s;
+}
+
+.contact_f {
+  color: #1D4D99;
+}
+
+.contact_g {
+  color: #DC5246;
+}
+
+.contact_t {
+  color: #00ACEE;
+}
+
+.contact_l {
+  color: #0073B0;
 }
