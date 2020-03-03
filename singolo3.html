@@ -23,22 +23,21 @@
     <div class="main">
       <div class="wrapper">
 
-        <div class="quote-form">
-          <form class="quote" action="#" method="post">
-            <input type="text" name="name" value="" placeholder="Name (Required)" required>
-            <input type="email" name="email" value="" placeholder="Email (Required)" required>
-            <input type="text" name="subject" value="" placeholder="Subject">
-            <textarea name="message" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>
-            <input type="submit" name="submit" value="Submit">
-          </form>
-        </div>
+        <form class="quote-form" action method="post">
+          <input type="text" name="name" value="" placeholder="Name (Required)" required>
+          <input type="email" name="email" value="" placeholder="Email (Required)" required>
+          <input type="text" name="subject" value="" placeholder="Subject">
+          <textarea name="message" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>            <input type="submit" name="submit" value="Submit">
+        </form>
 
         <div class="information">
-          <p>Contact Information</p>
-          <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-          <p>Elm St. 14/05 Lost City</p>
-          <p>03528 331 86 35</p>
-          <p>info@singolo.com</p>
+          <p class="information__name">Contact Information</p>
+          <p class="information__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+          <div class="information__contacts">
+            <p class="information__contact"><a href="https://goo.gl/maps/vDMwKPZ6XLVJFT5UA"><img src="assets/img/information/location.png" alt="">Elm St. 14/05 Lost City</a></p>
+            <p class="information__contact"><a href="tel:035283318635"><img src="assets/img/information/phone.png" alt="">03528 331 86 35</a></p>
+            <p class="information__contact"><a href="mailto:info@singolo.com"><img src="assets/img/information/mail.png" alt="">info@singolo.com</a></p>
+          </div>
         </div>
 
       </div>
@@ -47,8 +46,8 @@
     <footer>
       <div class="wrapper">
 
-        <span class="copyrigth">&copyCopyrigth 2013</span>
-        <div class="employee__contacts">
+        <span class="copyrigth">&copy&nbspCopyrigth 2013</span>
+        <div class="employee__contacts_rigth">
           <span class="contact contact_f">
             <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook" width="32" height="32"></a>
           </span>
