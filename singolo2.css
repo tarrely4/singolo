@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  margin: 0 auto;
+  max-width: 1020px;
+  font-size: 10px;
+}
+
+.portfolio {
+  background-color: #2d303a;
+  border-bottom: solid #323746 6px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.section__name {
+  padding-top: 69px;
+  font-family: "Lato-Black", Verdana, sans-serif;
+  line-height: 18px;
+  font-size: 3rem;
+  letter-spacing: 0.02rem;
+  word-spacing: -0.15rem;
+  font-weight: 900;
+  color: #666d89;
+}
+
+.section__text {
+  padding-top: 27px;
+  font-family: "Lato-Light", Verdana, sans-serif;
+  line-height: 30px;
+  font-size: 1.8rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.03rem;
+  font-weight: 300;
+  color: #767e9e;
+}
+
+.portfolio__buttons {
+  padding-top: 12px;
+}
+
+.buttons input[type="checkbox"] {
+  display: none;
+}
+
+.buttons label {
+  margin-right: 6px;
+  padding: 3px 7px;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid #767e9e 1px;
+  border-radius: 5px;
+
+  font-family: "Lato-Regular", Verdana, sans-serif;
+  line-height: 25px;
+  font-size: 1.2rem;
+  color: #767e9e;
+
+  cursor: pointer;
+}
+
+.buttons input[type="checkbox"]:checked + label {
+  border: solid #dedede 1px;
+  color: #dedede;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template: repeat(3, 187px) / repeat(4, 220px);
+  grid-gap: 20px;
+
+  padding: 16px 0 67px 0;
+}
+
+.picture:nth-child(n+13){
+  display:none;
+}
+
+.about-us {
+  background-color: #f2f2f2;
+  border-bottom: solid #ffffff 6px;
+}
+
+.employee-flex {
+  padding-top: 45px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.employee {
+  max-width: 300px;
+}
+
+.employee__name {
+  padding-top: 16px;
+
+  font-family: "Lato-Black", Verdana, sans-serif;
+  line-height: 18px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #666d89;
+}
+
+.employee__text {
+  padding-top: 10px;
+  font-family: "Lato-Regular", Verdana, sans-serif;
+  line-height: 22px;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  word-spacing: -0.15rem;
+  font-weight: 400;
+  color: #767e9e;
+}
+
+.employee__contacts {
+  padding: 22px 0 65px 0;
+}
+
+.contact {
+  display: inline-block;
+  margin-right: 6px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.contact:hover {
+  box-shadow: 0 0 14px 3px;
+  transition: 0.3s;
+}
+
+.contact_f {
+  color: #1D4D99;
+}
+
+.contact_g {
+  color: #DC5246;
+}
+
+.contact_t {
+  color: #00ACEE;
+}
+
+.contact_l {
+  color: #0073B0;
+}
