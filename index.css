@@ -99,6 +99,7 @@ html {
   word-spacing: 0.03rem;
   font-weight: 300;
   color: #767e9e;
+  text-align: justify;
 }
 
 
@@ -277,6 +278,9 @@ html {
   font-size: 1.8rem;
   font-weight: 900;
   color: #666d89;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .employee__text {
