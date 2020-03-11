@@ -202,6 +202,7 @@ html {
   font-size: 1.2rem;
   letter-spacing: 0.3px;
   word-spacing: 0.25rem;
+  text-align: justify;
   color: #666d89;
   overflow: hidden;
 }
@@ -287,6 +288,7 @@ html {
   letter-spacing: 0.1rem;
   word-spacing: -0.15rem;
   font-weight: 400;
+  text-align: justify;
   color: #767e9e;
 }
 
@@ -398,6 +400,7 @@ input[type="submit"]:hover {
   font-size: 1.1rem;
   letter-spacing: 0.04rem;
   font-weight: 400;
+  text-align: justify;
   color: #f0d8d9;
 }
 
