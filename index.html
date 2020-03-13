@@ -10,46 +10,52 @@
   </head>
 
   <body>
+    <a class="anchor" id="top"></a>
     <header class="header">
       <div class="wrapper">
 
         <div class="logo">
-          <a href="#"><h1>SINGOLO<span>*</span></h1></a>
+          <a href="#top"><h1 id="logo" onclick="toTop()">SINGOLO<span>*</span></h1></a>
         </div>
 
         <nav class="header__navigation">
           <ul class="navigation" id="menu">
-            <li class="navigation__elem"><a href="#">HOME</a></li>
-            <li class="navigation__elem"><a href="#">SERVICES</a></li>
-            <li class="navigation__elem"><a href="#">PORTFOLIO</a></li>
-            <li class="navigation__elem"><a href="#">ABOUT</a></li>
-            <li class="navigation__elem"><a href="#">CONTACT</a></li>
+            <li class="navigation__elem"><a href="#top">HOME</a></li>
+            <li class="navigation__elem"><a href="#services">SERVICES</a></li>
+            <li class="navigation__elem"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="navigation__elem"><a href="#about">ABOUT</a></li>
+            <li class="navigation__elem"><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
 
       </div>
     </header>
 
-    <div class="slider">
-      <div class="wrapper">
+    <div class="slider" id="sliderScreen">
 
-        <button class="slider__button slider__button_left" type="button">
+        <div class="slide">
+          <img class="vertical" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
+          <img class="vertical" src="assets/img/slider/screen-vertical.png" alt="" width="215" height="458">
+          <img class="vertical" onclick="screenOpacity()" src="assets/img/slider/phone.png" alt="" width="215" height="458">
+          <img class="horizontal shadow-h" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
+          <img class="horizontal screen-h" src="assets/img/slider/screen-horizontal.png" alt="" width="214" height="457">
+          <img class="horizontal phone-h"  onclick="screenOpacity()" src="assets/img/slider/phone.png" alt="" width="215" height="458">
+        </div>
+        <div class="slide slide_visible">
+          <img src="assets/img/slider/slide2.png" alt="">
+        </div>
+
+        <button class="slider__button slider__button_left" type="button" onclick="sliderButton()">
           <img src="assets/img/slider/chev.png" alt="">
         </button>
 
-        <img class="vertical" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
-        <img class="vertical" src="assets/img/slider/screen-vertical.png" alt="" width="215" height="458">
-        <img class="vertical" src="assets/img/slider/phone.png" alt="" width="215" height="458">
-        <img class="horizontal shadow-h" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
-        <img class="horizontal screen-h" src="assets/img/slider/screen-horizontal.png" alt="" width="214" height="457">
-        <img class="horizontal phone-h" src="assets/img/slider/phone.png" alt="" width="215" height="458">
-
-        <button class="slider__button slider__button_right" type="button">
+        <button class="slider__button slider__button_right" type="button" onclick="sliderButton()">
           <img src="assets/img/slider/chev.png" alt="">
         </button>
 
-      </div>
     </div>
+
+    <a class="anchor" id="services"></a>
 
     <section class="our-services">
       <div class="wrapper">
@@ -111,6 +117,8 @@
 
       </div>
     </section>
+
+    <a class="anchor" id="portfolio"></a>
 
     <section class="portfolio">
       <div class="wrapper">
@@ -187,7 +195,9 @@
       </div>
     </section>
 
-    <section class="about-us">
+    <a class="anchor" id="about"></a>
+
+    <section class="about-us" id="about">
       <div class="wrapper">
 
         <h2 class="section__name section__name_about">About Us</h2>
@@ -266,7 +276,9 @@
       </div>
     </section>
 
-    <section class="quote">
+    <a class="anchor" id="contact"></a>
+
+    <section class="quote" id="contact">
       <div class="wrapper">
 
         <h2 class="section__name section__name_quote">Get a Quote</h2>

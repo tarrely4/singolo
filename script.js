@@ -1,6 +1,47 @@
  let MENU = document.getElementById('menu');
 
 MENU.addEventListener('click', (event) => {
-  MENU.querySelectorAll('a').forEach(el => el.classList.remove('selected'));
-  event.target.closest('a').classList.add('selected');
+  MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+  event.target.closest('a').classList.add('linked');
 })
+
+function toTop() {
+  MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+  MENU.querySelector('a').classList.add('linked');
+}
+
+window.onscroll = function() {
+  let scrollTop = document.documentElement.scrollTop;
+  if (scrollTop < 550) {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+    MENU.querySelector('a').classList.add('linked');
+  }
+  if (scrollTop > 550 && scrollTop < 1000) {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+    MENU.querySelectorAll('a')[1].classList.add('linked');
+  }
+  if (scrollTop > 1000 && scrollTop < 1950) {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+    MENU.querySelectorAll('a')[2].classList.add('linked');
+  }
+  if (scrollTop > 1950 && scrollTop < 2700) {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+    MENU.querySelectorAll('a')[3].classList.add('linked');
+  }
+  if (scrollTop > 2700 && scrollTop < 3200) {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+    MENU.querySelectorAll('a')[4].classList.add('linked');
+  }
+}
+
+function screenOpacity() {
+  let q = getComputedStyle(event.target.previousElementSibling);
+  if (q.filter == "brightness(0)") {
+    event.target.previousElementSibling.style.filter = "brightness(100%)"} else {
+    event.target.previousElementSibling.style.filter = "brightness(0%)";
+  }
+}
+
+function sliderButton() {
+  document.getElementById('sliderScreen').querySelectorAll('div').forEach(el => el.classList.toggle('slide_visible'));
+}
