@@ -45,3 +45,32 @@ function screenOpacity() {
 function sliderButton() {
   document.getElementById('sliderScreen').querySelectorAll('div').forEach(el => el.classList.toggle('slide_visible'));
 }
+
+let PMENU = document.getElementById('portfolio-menu');
+let PICTURES = document.getElementById('pictures');
+
+PMENU.addEventListener('click', (event) => {
+  PMENU.querySelectorAll('input').forEach(el => el.checked = false);
+  event.target.checked = true;
+  hidePicture(event.target.closest('input').getAttribute('name'));
+})
+
+function hidePicture (tag) {
+  if (tag == "all") {
+    PICTURES.querySelectorAll('div').forEach(el => el.classList.remove('hide-picture'));
+    } else {
+    let length = PICTURES.querySelectorAll('img').length;
+    for (let i = 0; length - 1; i++) {
+      if (PICTURES.querySelectorAll('div')[i].classList.contains(tag)) {
+        PICTURES.querySelectorAll('div')[i].classList.remove('hide-picture');
+        } else {
+        PICTURES.querySelectorAll('div')[i].classList.add('hide-picture');
+      }
+    }
+  }
+}
+
+PICTURES.addEventListener('click', (event) => {
+  PICTURES.querySelectorAll('div').forEach(el => el.classList.remove('clicked'));
+  event.target.closest('div').classList.add('clicked');
+})
