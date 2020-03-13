@@ -74,3 +74,13 @@ PICTURES.addEventListener('click', (event) => {
   PICTURES.querySelectorAll('div').forEach(el => el.classList.remove('clicked'));
   event.target.closest('div').classList.add('clicked');
 })
+
+// document.getElementById("quote-form").submit() = function {
+function submitWindow() {
+   // let form = document.forms.quote.value;
+   // let name = document.forms.elements.name.value;
+  // let email = form.elements.email.value;
+  // let subject = form.elements.subject.value;
+  // let details = form.elements.message.value;
+  alert(name);
+}

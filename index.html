@@ -282,11 +282,12 @@
     <div class="main">
       <div class="wrapper">
 
-        <form class="quote-form" action method="post">
+        <form onsubmit="submitWindow()" class="quote-form" id="quote-form" name="quote" >
           <input type="text" name="name" value="" placeholder="Name (Required)" required>
           <input type="email" name="email" value="" placeholder="Email (Required)" required>
           <input type="text" name="subject" value="" placeholder="Subject">
-          <textarea name="message" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>            <input type="submit" name="submit" value="Submit">
+          <textarea name="message" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>
+          <input type="submit" name="submit" value="Submit">
         </form>
 
         <div class="information">
