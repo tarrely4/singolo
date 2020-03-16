@@ -24,11 +24,11 @@ window.onscroll = function() {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
     MENU.querySelectorAll('a')[2].classList.add('linked');
   }
-  if (scrollTop > 1950 && scrollTop < 2700) {
+  if (scrollTop > 1950 && scrollTop < 2400) {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
     MENU.querySelectorAll('a')[3].classList.add('linked');
   }
-  if (scrollTop > 2700 && scrollTop < 3200) {
+  if (scrollTop > 2400 && scrollTop < 3200) {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
     MENU.querySelectorAll('a')[4].classList.add('linked');
   }
@@ -75,12 +75,16 @@ PICTURES.addEventListener('click', (event) => {
   event.target.closest('div').classList.add('clicked');
 })
 
-// document.getElementById("quote-form").submit() = function {
 function submitWindow() {
-   // let form = document.forms.quote.value;
-   // let name = document.forms.elements.name.value;
-  // let email = form.elements.email.value;
-  // let subject = form.elements.subject.value;
-  // let details = form.elements.message.value;
-  alert(name);
+  let form = document.forms[0];
+  let subject = form.elements.subject.value;
+  let description = form.elements.description.value;
+  let window = document.getElementById('modalWindow').querySelectorAll('p');
+  subject.length > 0 ? window[1].innerHTML = "Subject: " + subject : window[1].innerHTML = "Without subject";
+  description.length > 0 ? window[2].innerHTML = "Description: " + description : window[2].innerHTML = "Without description";
+  document.getElementById('modalWindow').style.display = "block";
+}
+
+function modalOK() {
+  document.getElementById('modalWindow').style.display = "none";
 }
