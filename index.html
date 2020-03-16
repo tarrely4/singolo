@@ -10,46 +10,52 @@
   </head>
 
   <body>
+    <a class="anchor" id="top"></a>
     <header class="header">
       <div class="wrapper">
 
         <div class="logo">
-          <a href="#"><h1>SINGOLO<span>*</span></h1></a>
+          <a href="#top"><h1 id="logo" onclick="toTop()">SINGOLO<span>*</span></h1></a>
         </div>
 
         <nav class="header__navigation">
-          <ul class="navigation">
-            <li class="navigation__elem"><a href="#">HOME</a></li>
-            <li class="navigation__elem"><a href="#">SERVICES</a></li>
-            <li class="navigation__elem"><a href="#">PORTFOLIO</a></li>
-            <li class="navigation__elem"><a href="#">ABOUT</a></li>
-            <li class="navigation__elem"><a href="#">CONTACT</a></li>
+          <ul class="navigation" id="menu">
+            <li class="navigation__elem"><a href="#top">HOME</a></li>
+            <li class="navigation__elem"><a href="#services">SERVICES</a></li>
+            <li class="navigation__elem"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="navigation__elem"><a href="#about">ABOUT</a></li>
+            <li class="navigation__elem"><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
 
       </div>
     </header>
 
-    <div class="slider">
-      <div class="wrapper">
+    <div class="slider" id="sliderScreen">
 
-        <button class="slider__button slider__button_left" type="button">
+        <div class="slide">
+          <img class="vertical" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
+          <img class="vertical" src="assets/img/slider/screen-vertical.png" alt="" width="215" height="458">
+          <img class="vertical" onclick="screenOpacity()" src="assets/img/slider/phone.png" alt="" width="215" height="458">
+          <img class="horizontal shadow-h" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
+          <img class="horizontal screen-h" src="assets/img/slider/screen-horizontal.png" alt="" width="214" height="457">
+          <img class="horizontal phone-h"  onclick="screenOpacity()" src="assets/img/slider/phone.png" alt="" width="215" height="458">
+        </div>
+        <div class="slide slide_visible">
+          <img src="assets/img/slider/slide2.png" alt="">
+        </div>
+
+        <button class="slider__button slider__button_left" type="button" onclick="sliderButton()">
           <img src="assets/img/slider/chev.png" alt="">
         </button>
 
-        <img class="vertical" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
-        <img class="vertical" src="assets/img/slider/screen-vertical.png" alt="" width="215" height="458">
-        <img class="vertical" src="assets/img/slider/phone.png" alt="" width="215" height="458">
-        <img class="horizontal shadow-h" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
-        <img class="horizontal screen-h" src="assets/img/slider/screen-horizontal.png" alt="" width="214" height="457">
-        <img class="horizontal phone-h" src="assets/img/slider/phone.png" alt="" width="215" height="458">
-
-        <button class="slider__button slider__button_right" type="button">
+        <button class="slider__button slider__button_right" type="button" onclick="sliderButton()">
           <img src="assets/img/slider/chev.png" alt="">
         </button>
 
-      </div>
     </div>
+
+    <a class="anchor" id="services"></a>
 
     <section class="our-services">
       <div class="wrapper">
@@ -112,19 +118,21 @@
       </div>
     </section>
 
+    <a class="anchor" id="portfolio"></a>
+
     <section class="portfolio">
       <div class="wrapper">
 
         <h2 class="section__name section__name_portfolio">Portfolio</h2>
         <p class="section__text section__text_portfolio">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
-        <div class="portfolio__buttons">
+        <div class="portfolio__buttons" id="portfolio-menu">
           <span class="buttons">
-            <input id="tag-all" type="checkbox" name="all" value="all" checked="checked">
+            <input id="tag-all" type="checkbox" name="all" value="all" checked>
             <label for="tag-all">All</label>
           </span>
           <span class="buttons">
-            <input id="tag-web" type="checkbox" name="web" value="web">
+            <input id="tag-web" type="checkbox" name="web" value="web" >
             <label for="tag-web">Web Design</label>
           </span>
           <span class="buttons">
@@ -137,49 +145,41 @@
           </span>
         </div>
 
-        <div class="portfolio-grid">
-          <div class="picture">
+        <div class="portfolio-grid" id="pictures">
+          <div class="picture graphic">
               <img src="assets/img/portfolio/1.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture artwork">
               <img src="assets/img/portfolio/2.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture graphic">
               <img src="assets/img/portfolio/3.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture artwork">
               <img src="assets/img/portfolio/4.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture web">
               <img src="assets/img/portfolio/5.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture artwork">
               <img src="assets/img/portfolio/6.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture artwork">
               <img src="assets/img/portfolio/7.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture graphic">
               <img src="assets/img/portfolio/8.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture graphic">
               <img src="assets/img/portfolio/9.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture web">
               <img src="assets/img/portfolio/10.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
+          <div class="picture artwork">
               <img src="assets/img/portfolio/11.png" alt="" width="220" height="187">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/12.png" alt="" width="220" height="187">
-          </div>
-<!-- 13 14 -->
-          <div class="picture">
-              <img src="assets/img/portfolio/12.png" alt="" width="220" height="187">
-          </div>
-
-          <div class="picture">
+          <div class="picture web">
               <img src="assets/img/portfolio/12.png" alt="" width="220" height="187">
           </div>
         </div>
@@ -187,7 +187,9 @@
       </div>
     </section>
 
-    <section class="about-us">
+    <a class="anchor" id="about"></a>
+
+    <section class="about-us" id="about">
       <div class="wrapper">
 
         <h2 class="section__name section__name_about">About Us</h2>
@@ -266,7 +268,9 @@
       </div>
     </section>
 
-    <section class="quote">
+    <a class="anchor" id="contact"></a>
+
+    <section class="quote" id="contact">
       <div class="wrapper">
 
         <h2 class="section__name section__name_quote">Get a Quote</h2>
@@ -278,11 +282,12 @@
     <div class="main">
       <div class="wrapper">
 
-        <form class="quote-form" action method="post">
+        <form onsubmit="submitWindow(); return false" class="quote-form" name="quote">
           <input type="text" name="name" value="" placeholder="Name (Required)" required>
           <input type="email" name="email" value="" placeholder="Email (Required)" required>
           <input type="text" name="subject" value="" placeholder="Subject">
-          <textarea name="message" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>            <input type="submit" name="submit" value="Submit">
+          <textarea name="description" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>
+          <input type="submit" name="submit" value="Submit">
         </form>
 
         <div class="information">
@@ -296,6 +301,13 @@
         </div>
 
       </div>
+    </div>
+
+    <div class="modal__window" id="modalWindow">
+      <p class="modal__letter">The letter was sent</p>
+      <p class="modal__subject"></p>
+      <p class="modal__description"></p>
+      <button type="button" name="button" class="modal__button" onclick="modalOK()">OK</button>
     </div>
 
     <footer>
@@ -320,5 +332,6 @@
       </div>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
