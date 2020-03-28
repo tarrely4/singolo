@@ -1,4 +1,4 @@
- let MENU = document.getElementById('menu');
+let MENU = document.getElementById('menu');
 
 MENU.addEventListener('click', (event) => {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
@@ -34,16 +34,24 @@ window.onscroll = function() {
   }
 }
 
-function screenOpacity() {
-  let q = getComputedStyle(event.target.previousElementSibling);
-  if (q.filter == "brightness(0)") {
-    event.target.previousElementSibling.style.filter = "brightness(100%)"} else {
-    event.target.previousElementSibling.style.filter = "brightness(0%)";
+function screenVertical() {
+  let disp = document.getElementById('vertical-display')
+  if (disp.style.filter == "brightness(0%)") {
+    disp.style.filter = "brightness(100%)"} else {
+    disp.style.filter = "brightness(0%)";
+  }
+}
+
+function screenHorizontal() {
+  let disp = document.getElementById('horizontal-display')
+  if (disp.style.filter == "brightness(0%)") {
+    disp.style.filter = "brightness(100%)"} else {
+    disp.style.filter = "brightness(0%)";
   }
 }
 
 function sliderButton() {
-  document.getElementById('sliderScreen').querySelectorAll('div').forEach(el => el.classList.toggle('slide_visible'));
+  document.getElementById('sliderScreen').querySelectorAll('div').forEach(el => el.classList.toggle('slide_invisible'));
 }
 
 let PMENU = document.getElementById('portfolio-menu');
@@ -80,11 +88,15 @@ function submitWindow() {
   let subject = form.elements.subject.value;
   let description = form.elements.description.value;
   let window = document.getElementById('modalWindow').querySelectorAll('p');
-  subject.length > 0 ? window[1].innerHTML = "Subject: " + subject : window[1].innerHTML = "Without subject";
-  description.length > 0 ? window[2].innerHTML = "Description: " + description : window[2].innerHTML = "Without description";
+  window[1].innerHTML = subject.length > 0 ? "Subject: " + subject : "Without subject";
+  window[2].innerHTML = description.length > 0 ? "Description: " + description : "Without description";
   document.getElementById('modalWindow').style.display = "block";
 }
 
 function modalOK() {
   document.getElementById('modalWindow').style.display = "none";
+  document.forms[0].elements.name.value = "";
+  document.forms[0].elements.email.value = "";
+  document.forms[0].elements.subject.value = "";
+  document.forms[0].elements.description.value = "";
 }
