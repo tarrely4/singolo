@@ -60,22 +60,13 @@ let PICTURES = document.getElementById('pictures');
 PMENU.addEventListener('click', (event) => {
   PMENU.querySelectorAll('input').forEach(el => el.checked = false);
   event.target.checked = true;
-  hidePicture(event.target.closest('input').getAttribute('name'));
+  shufflePicture();
 })
 
-function hidePicture (tag) {
-  if (tag == "all") {
-    PICTURES.querySelectorAll('div').forEach(el => el.classList.remove('hide-picture'));
-    } else {
-    let length = PICTURES.querySelectorAll('img').length;
-    for (let i = 0; length - 1; i++) {
-      if (PICTURES.querySelectorAll('div')[i].classList.contains(tag)) {
-        PICTURES.querySelectorAll('div')[i].classList.remove('hide-picture');
-        } else {
-        PICTURES.querySelectorAll('div')[i].classList.add('hide-picture');
-      }
-    }
-  }
+function shufflePicture() {
+  let rand = Math.floor(Math.random() * 12);
+  let randomPicture = PICTURES.removeChild(PICTURES.querySelectorAll('div')[rand]);
+  PICTURES.appendChild(randomPicture);
 }
 
 PICTURES.addEventListener('click', (event) => {
