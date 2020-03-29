@@ -45,13 +45,17 @@ function screenVertical() {
 function screenHorizontal() {
   let disp = document.getElementById('horizontal-display')
   if (disp.style.filter == "brightness(0%)") {
-    disp.style.filter = "brightness(100%)"} else {
+    disp.style.filter = "brightness(100%)";} else {
     disp.style.filter = "brightness(0%)";
   }
 }
 
+let SLIDER = document.getElementById('slider');
+
 function sliderButton() {
   document.getElementById('sliderScreen').querySelectorAll('div').forEach(el => el.classList.toggle('slide_invisible'));
+  let color = window.getComputedStyle(SLIDER).backgroundColor;
+  SLIDER.style.backgroundColor = color == "rgb(240, 108, 100)" ? "rgb(100, 139, 240)" : "rgb(240, 108, 100)";
 }
 
 let PMENU = document.getElementById('portfolio-menu');

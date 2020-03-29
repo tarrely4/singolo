@@ -187,7 +187,7 @@ a.linked:visited,
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background-color: #f06c64;
+  background-color: rgb(240, 108, 100);
   border-bottom: solid #ea676b 6px;
 }
 
