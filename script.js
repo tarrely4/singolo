@@ -107,6 +107,7 @@ BURGERICON.onclick = function() {
   showMenu();
   rotateIcon();
   logoMove();
+  overlay();
 }
 
 function rotateIcon() {BURGERICON.classList.toggle("burger-menu__icon_rotated");}
@@ -115,9 +116,15 @@ function showMenu() {BURGERMENU.classList.toggle("show-menu");}
 
 function logoMove() {LOGO.classList.toggle("logo-burger");}
 
+function overlay() {
+  document.getElementById('overlay').classList.toggle("show-menu");
+  document.body.style.overflow = BURGERMENU.classList.contains("show-menu") ? "hidden" : "auto";
+}
+
 BURGERMENU.addEventListener('click', (event) => {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
   showMenu();
   rotateIcon();
   logoMove();
+  overlay();
 })

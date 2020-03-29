@@ -99,6 +99,18 @@ a.linked:visited,
   left: 0;
   top: 71px;
   background: #2D303A;
+  z-index: 20;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 71px;
+  background: rgba(45, 48, 58, 0.6);
+  z-index: 10;
 }
 
 .burger-menu__list {
