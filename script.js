@@ -58,14 +58,17 @@ let PMENU = document.getElementById('portfolio-menu');
 let PICTURES = document.getElementById('pictures');
 
 PMENU.addEventListener('click', (event) => {
-  PMENU.querySelectorAll('input').forEach(el => el.checked = false);
-  event.target.checked = true;
-  shufflePicture();
+    PMENU.querySelectorAll('input').forEach(el => el.checked = false);
+    event.target.checked = true;
+    shufflePicture();
 })
 
 function shufflePicture() {
   let rand = Math.floor(Math.random() * 12);
   let randomPicture = PICTURES.removeChild(PICTURES.querySelectorAll('div')[rand]);
+  PICTURES.appendChild(randomPicture);
+  rand = Math.floor(Math.random() * 12);
+  randomPicture = PICTURES.removeChild(PICTURES.querySelectorAll('div')[rand]);
   PICTURES.appendChild(randomPicture);
 }
 
@@ -91,3 +94,26 @@ function modalOK() {
   document.forms[0].elements.subject.value = "";
   document.forms[0].elements.description.value = "";
 }
+
+let BURGERMENU = document.getElementById('burger-menu');
+let BURGERICON = document.getElementById('burger-menu-icon');
+let LOGO = document.getElementById('logo');
+
+BURGERICON.onclick = function() {
+  showMenu();
+  rotateIcon();
+  logoMove();
+}
+
+function rotateIcon() {BURGERICON.classList.toggle("burger-menu__icon_rotated");}
+
+function showMenu() {BURGERMENU.classList.toggle("show-menu");}
+
+function logoMove() {LOGO.classList.toggle("logo-burger");}
+
+BURGERMENU.addEventListener('click', (event) => {
+  MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
+  showMenu();
+  rotateIcon();
+  logoMove();
+})
