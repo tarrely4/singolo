@@ -10,46 +10,69 @@
   </head>
 
   <body>
+    <a class="anchor" id="top"></a>
     <header class="header">
       <div class="wrapper">
 
+          <div class="burger-menu__icon" id="burger-menu-icon">
+            <img src="assets/img/burger-menu/burger-menu-icon.png" alt="">
+          </div>
+          <div class="burger-menu" id="burger-menu">
+            <div class="burger-menu__list" id="burger-menu-list">
+              <p class="burger-menu__elem"><a href="#top">HOME</a></p>
+              <p class="burger-menu__elem"><a href="#services">SERVICES</a></p>
+              <p class="burger-menu__elem"><a href="#portfolio">PORTFOLIO</a></p>
+              <p class="burger-menu__elem"><a href="#about">ABOUT</a></p>
+              <p class="burger-menu__elem"><a href="#contact">CONTACT</a></p>
+            </div>
+          </div>
+
         <div class="logo">
-          <a href="#"><h1>SINGOLO<span>*</span></h1></a>
+          <a href="#top"><h1 id="logo" onclick="toTop()">SINGOLO<span>*</span></h1></a>
         </div>
 
         <nav class="header__navigation">
-          <ul class="navigation">
-            <li class="navigation__elem"><a href="#">HOME</a></li>
-            <li class="navigation__elem"><a href="#">SERVICES</a></li>
-            <li class="navigation__elem"><a href="#">PORTFOLIO</a></li>
-            <li class="navigation__elem"><a href="#">ABOUT</a></li>
-            <li class="navigation__elem"><a href="#">CONTACT</a></li>
+          <ul class="navigation" id="menu">
+            <li class="navigation__elem"><a href="#top">HOME</a></li>
+            <li class="navigation__elem"><a href="#services">SERVICES</a></li>
+            <li class="navigation__elem"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="navigation__elem"><a href="#about">ABOUT</a></li>
+            <li class="navigation__elem"><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
 
       </div>
     </header>
 
-    <div class="slider">
-      <div class="wrapper">
+    <div class="slider" id="slider">
 
-        <button class="slider__button slider__button_left" type="button">
-          <img src="assets/img/slider/chev.png" alt="">
-        </button>
+      <button class="slider__button slider__button_left" type="button" onclick="sliderButton()">
+        <img src="assets/img/slider/button-left.png" alt="">
+      </button>
 
-        <img class="vertical" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
-        <img class="vertical" src="assets/img/slider/screen-vertical.png" alt="" width="215" height="458">
-        <img class="vertical" src="assets/img/slider/phone.png" alt="" width="215" height="458">
-        <img class="horizontal shadow-h" src="assets/img/slider/shadow.png" alt="" width="240" height="483">
-        <img class="horizontal screen-h" src="assets/img/slider/screen-horizontal.png" alt="" width="214" height="457">
-        <img class="horizontal phone-h" src="assets/img/slider/phone.png" alt="" width="215" height="458">
-
-        <button class="slider__button slider__button_right" type="button">
-          <img src="assets/img/slider/chev.png" alt="">
-        </button>
-
+      <div class="slider__content" id="sliderScreen">
+        <div class="slide">
+          <map name="dispays" id="dispays">
+            <area shape="circle" coords="108,482,21" onclick="screenVertical()" onmouseover="this.style.cursor = 'pointer'" alt="">
+            <area shape="circle" coords="343,285,21" onclick="screenHorizontal()" onmouseover="this.style.cursor = 'pointer'" alt="">
+          </map>
+          <img class="active" usemap="#dispays" src="assets/img/slider/slide1.png" alt="" width="796" height="594">
+          <img class="display-vertical active" id="vertical-display" src="assets/img/slider/phone-vertical-display.png" alt="">
+          <img class="display-horizontal active" id="horizontal-display" src="assets/img/slider/phone-horizontal-display.png" alt="">
+          <img class="non-active" src="assets/img/slider/slide1q.png" alt="">
+        </div>
+        <div class="slide slide_invisible">
+          <img src="assets/img/slider/slide2.png" alt="">
+        </div>
       </div>
+
+      <button class="slider__button slider__button_right" type="button" onclick="sliderButton()">
+        <img src="assets/img/slider/button-right.png" alt="">
+      </button>
+
     </div>
+
+    <a class="anchor" id="services"></a>
 
     <section class="our-services">
       <div class="wrapper">
@@ -61,7 +84,7 @@
 
           <div class="service">
             <span class="service__icon">
-              <img src="assets/img/our-services/pen.png" alt="" width="59" height="59">
+              <img src="assets/img/our-services/pen.png" alt="">
             </span>
             <h3 class="service__name">Custom Design</h3>
             <p class="service__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
@@ -69,7 +92,7 @@
 
           <div class="service">
             <span class="service__icon">
-              <img src="assets/img/our-services/bulb.png" alt="" width="59" height="59">
+              <img src="assets/img/our-services/bulb.png" alt="">
             </span>
             <h3 class="service__name">Inovative Ideas</h3>
             <p class="service__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
@@ -77,7 +100,7 @@
 
           <div class="service">
             <span class="service__icon">
-              <img src="assets/img/our-services/heart.png" alt="" width="59" height="59">
+              <img src="assets/img/our-services/heart.png" alt="">
             </span>
             <h3 class="service__name">Love Is The Answer</h3>
             <p class="service__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
@@ -85,7 +108,7 @@
 
           <div class="service">
             <span class="service__icon">
-              <img src="assets/img/our-services/phone.png" alt="" width="59" height="59">
+              <img src="assets/img/our-services/phone.png" alt="">
             </span>
             <h3 class="service__name">Responsive Layout</h3>
             <p class="service__text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
@@ -93,7 +116,7 @@
 
           <div class="service">
             <span class="service__icon">
-              <img src="assets/img/our-services/bubble.png" alt="" width="59" height="59">
+              <img src="assets/img/our-services/bubble.png" alt="">
             </span>
             <h3 class="service__name">24 / 7 Support</h3>
             <p class="service__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
@@ -101,7 +124,7 @@
 
           <div class="service">
             <span class="service__icon">
-              <img src="assets/img/our-services/star.png" alt="" width="59" height="59">
+              <img src="assets/img/our-services/star.png" alt="">
             </span>
             <h3 class="service__name">Feel Like A Star</h3>
             <p class="service__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
@@ -112,19 +135,21 @@
       </div>
     </section>
 
+    <a class="anchor" id="portfolio"></a>
+
     <section class="portfolio">
       <div class="wrapper">
 
         <h2 class="section__name section__name_portfolio">Portfolio</h2>
         <p class="section__text section__text_portfolio">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
-        <div class="portfolio__buttons">
+        <div class="portfolio__buttons" id="portfolio-menu">
           <span class="buttons">
-            <input id="tag-all" type="checkbox" name="all" value="all" checked="checked">
+            <input id="tag-all" type="checkbox" name="all" value="all" checked>
             <label for="tag-all">All</label>
           </span>
           <span class="buttons">
-            <input id="tag-web" type="checkbox" name="web" value="web">
+            <input id="tag-web" type="checkbox" name="web" value="web" >
             <label for="tag-web">Web Design</label>
           </span>
           <span class="buttons">
@@ -137,57 +162,51 @@
           </span>
         </div>
 
-        <div class="portfolio-grid">
-          <div class="picture">
-              <img src="assets/img/portfolio/1.png" alt="" width="220" height="187">
+        <div class="portfolio-grid" id="pictures">
+          <div class="picture graphic">
+              <img src="assets/img/portfolio/1.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/2.png" alt="" width="220" height="187">
+          <div class="picture artwork">
+              <img src="assets/img/portfolio/2.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/3.png" alt="" width="220" height="187">
+          <div class="picture graphic">
+              <img src="assets/img/portfolio/3.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/4.png" alt="" width="220" height="187">
+          <div class="picture artwork">
+              <img src="assets/img/portfolio/4.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/5.png" alt="" width="220" height="187">
+          <div class="picture web">
+              <img src="assets/img/portfolio/5.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/6.png" alt="" width="220" height="187">
+          <div class="picture artwork">
+              <img src="assets/img/portfolio/6.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/7.png" alt="" width="220" height="187">
+          <div class="picture artwork">
+              <img src="assets/img/portfolio/7.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/8.png" alt="" width="220" height="187">
+          <div class="picture graphic">
+              <img src="assets/img/portfolio/8.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/9.png" alt="" width="220" height="187">
+          <div class="picture graphic">
+              <img src="assets/img/portfolio/9.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/10.png" alt="" width="220" height="187">
+          <div class="picture web">
+              <img src="assets/img/portfolio/10.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/11.png" alt="" width="220" height="187">
+          <div class="picture artwork">
+              <img src="assets/img/portfolio/11.png" alt="">
           </div>
-          <div class="picture">
-              <img src="assets/img/portfolio/12.png" alt="" width="220" height="187">
-          </div>
-<!-- 13 14 -->
-          <div class="picture">
-              <img src="assets/img/portfolio/12.png" alt="" width="220" height="187">
-          </div>
-
-          <div class="picture">
-              <img src="assets/img/portfolio/12.png" alt="" width="220" height="187">
+          <div class="picture web">
+              <img src="assets/img/portfolio/12.png" alt="">
           </div>
         </div>
 
       </div>
     </section>
 
-    <section class="about-us">
+    <a class="anchor" id="about"></a>
+
+    <section class="about-us" id="about">
       <div class="wrapper">
 
         <h2 class="section__name section__name_about">About Us</h2>
@@ -197,66 +216,66 @@
 
           <div class="employee">
             <div class="employee__photo">
-              <img src="assets/img/about-us/photo/Adam Jensen.png" alt="photo" width="300" height="300">
+              <img src="assets/img/about-us/photo/Adam Jensen.png" alt="photo">
             </div>
             <p class="employee__name">Adam Jensen</p>
             <p class="employee__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
             <div class="employee__contacts">
               <span class="contact contact_f">
-                <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook" width="32" height="32"></a>
+                <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook"></a>
               </span>
               <span class="contact contact_g">
-                <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+" width="32" height="32"></a>
+                <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+"></a>
               </span>
               <span class="contact contact_t">
-                <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter" width="32" height="32"></a>
+                <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter"></a>
               </span>
               <span class="contact contact_l">
-                <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook" width="32" height="32"></a>
+                <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook"></a>
               </span>
             </div>
           </div>
 
           <div class="employee">
             <div class="employee__photo">
-              <img src="assets/img/about-us/photo/Desmond Miles.png" alt="photo" width="300" height="300">
+              <img src="assets/img/about-us/photo/Desmond Miles.png" alt="photo">
             </div>
             <p class="employee__name">Desmond Miles</p>
             <p class="employee__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
             <div class="employee__contacts">
               <span class="contact contact_f">
-                <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook" width="32" height="32"></a>
+                <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook"></a>
               </span>
               <span class="contact contact_g">
-                <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+" width="32" height="32"></a>
+                <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+"></a>
               </span>
               <span class="contact contact_t">
-                <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter" width="32" height="32"></a>
+                <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter"></a>
               </span>
               <span class="contact contact_l">
-                <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook" width="32" height="32"></a>
+                <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook"></a>
               </span>
             </div>
           </div>
 
           <div class="employee">
             <div class="employee__photo">
-              <img src="assets/img/about-us/photo/Scolara Visari.png" alt="photo" width="300" height="300">
+              <img src="assets/img/about-us/photo/Scolara Visari.png" alt="photo">
             </div>
             <p class="employee__name">Scolara Visari</p>
             <p class="employee__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
             <div class="employee__contacts">
               <span class="contact contact_f">
-                <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook" width="32" height="32"></a>
+                <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook"></a>
               </span>
               <span class="contact contact_g">
-                <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+" width="32" height="32"></a>
+                <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+"></a>
               </span>
               <span class="contact contact_t">
-                <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter" width="32" height="32"></a>
+                <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter"></a>
               </span>
               <span class="contact contact_l">
-                <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook" width="32" height="32"></a>
+                <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook"></a>
               </span>
             </div>
           </div>
@@ -266,36 +285,44 @@
       </div>
     </section>
 
-    <section class="quote">
+    <a class="anchor" id="contact"></a>
+
+    <section class="quote" id="contact">
       <div class="wrapper">
 
         <h2 class="section__name section__name_quote">Get a Quote</h2>
         <p class="section__text section__text_qoute">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 
-      </div>
-    </section>
+        <div class="main">
 
-    <div class="main">
-      <div class="wrapper">
+          <form onsubmit="submitWindow(); return false" class="quote-form" name="quote">
+            <input type="text" name="name" value="" placeholder="Name (Required)" required>
+            <input type="email" name="email" value="" placeholder="Email (Required)" required>
+            <input type="text" name="subject" value="" placeholder="Subject">
+            <textarea name="description" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>
+            <input type="submit" name="submit" value="Submit">
+          </form>
 
-        <form class="quote-form" action method="post">
-          <input type="text" name="name" value="" placeholder="Name (Required)" required>
-          <input type="email" name="email" value="" placeholder="Email (Required)" required>
-          <input type="text" name="subject" value="" placeholder="Subject">
-          <textarea name="message" rows="8" cols="80" placeholder="Describe your project in detail..."></textarea>            <input type="submit" name="submit" value="Submit">
-        </form>
-
-        <div class="information">
-          <p class="information__name">Contact Information</p>
-          <p class="information__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-          <div class="information__contacts">
-            <p class="information__contact"><a href="https://goo.gl/maps/vDMwKPZ6XLVJFT5UA"><img src="assets/img/information/location.png" alt="">Elm St. 14/05 Lost City</a></p>
-            <p class="information__contact"><a href="tel:035283318635"><img src="assets/img/information/phone.png" alt="">03528 331 86 35</a></p>
-            <p class="information__contact"><a href="mailto:info@singolo.com"><img src="assets/img/information/mail.png" alt="">info@singolo.com</a></p>
+          <div class="information">
+            <p class="information__name">Contact Information</p>
+            <p class="information__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+            <div class="information__contacts">
+              <p class="information__contact"><a href="https://goo.gl/maps/vDMwKPZ6XLVJFT5UA"><img src="assets/img/information/location.png" alt="">Elm St. 14/05 Lost City</a></p>
+              <p class="information__contact"><a href="tel:035283318635"><img src="assets/img/information/phone.png" alt="">03528 331 86 35</a></p>
+              <p class="information__contact"><a href="mailto:info@singolo.com"><img src="assets/img/information/mail.png" alt="">info@singolo.com</a></p>
+            </div>
           </div>
+
         </div>
 
       </div>
+    </section>
+
+    <div class="modal__window" id="modalWindow">
+      <p class="modal__letter">The letter was sent</p>
+      <p class="modal__subject"></p>
+      <p class="modal__description"></p>
+      <button type="button" name="button" class="modal__button" onclick="modalOK()">OK</button>
     </div>
 
     <footer>
@@ -304,21 +331,22 @@
         <span class="copyrigth">&copy&nbspCopyright 2013 · by PSDchat.com</span>
         <div class="employee__contacts_rigth">
           <span class="contact contact_f">
-            <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook" width="32" height="32"></a>
+            <a href="#" title="Facebook"><img src="assets/img/about-us/contacts/facebook.png" alt="Facebook"></a>
           </span>
           <span class="contact contact_g">
-            <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+" width="32" height="32"></a>
+            <a href="#" title="Google+"><img src="assets/img/about-us/contacts/google+.png" alt="Google+"></a>
           </span>
           <span class="contact contact_t">
-            <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter" width="32" height="32"></a>
+            <a href="#" title="Twitter"><img src="assets/img/about-us/contacts/twitter.png" alt="Twitter"></a>
           </span>
           <span class="contact contact_l">
-            <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook" width="32" height="32"></a>
+            <a href="#" title="LinkedIn"><img src="assets/img/about-us/contacts/linkedin.png" alt="Facebook"></a>
           </span>
         </div>
 
       </div>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>

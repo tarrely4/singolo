@@ -1,1 +1,1 @@
-https://tarrely4.github.io/singolo/
+https://tarrely4.github.io/singolo/index.html
