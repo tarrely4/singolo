@@ -8,6 +8,12 @@ MENU.addEventListener('click', (event) => {
 function toTop() {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('linked'));
   MENU.querySelector('a').classList.add('linked');
+  if (BURGERMENU.classList.contains("show-menu")) {
+    showMenu();
+    rotateIcon();
+    logoMove();
+    overlay();
+  }
 }
 
 window.onscroll = function() {
